@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    padding:0;
+    margin:0;
+    font-family: 'Karla', sans-serif ;
+}
+
+/* colors */
+.b-grey {
+    background-color: #F6F6F6;
+}
+
+.b-red {
+    background-color: #EF5C23;
+}
+
+.b-yellow {
+    background-color: #FDB100;
+}
+
+.b-green {
+    background-color: #4F6F51;
+}
+
+.b-purple {
+    background-color: #442560;
+}
+
+.b-brown {
+    background-color: #AE875B;
+}
+
+
+main {
+    padding: 50px 80px;
+    width: 100%;
+}
+
+#back-wrapper {
+    position: sticky;
+    top: 100px;
+    width: 100%;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#back-container {
+    position: relative;
+}
+#fixed-dots{
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+#fixed-backtext {
+    color: rgba(105, 105, 105, 0.075);
+    font-size: 18vw;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+svg {
+    width: 100vw;
+}
+#fixed-menu {
+    position: fixed;
+    padding: 15px;
+    margin-top: 20px;
+    right: 80px;
+    font-size: 20px;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #F6F6F6;
+    z-index: 9999999;
+    
+}
+
+#fixed-menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: grey;
+}
+
+#fixed-menu a:hover {
+    font-weight: bold;
+}
+
+#about {
+    z-index: 999;
+    height: calc(100vh - 100px);
+    overflow-x: scroll;
+    padding-top: 80px;
+    position: relative;
+}
+
+#work {
+    padding-bottom: 150px;
+    min-height: 2000px;
+    position: relative;
+}
+
+#work main {
+    position: absolute;
+    top: 130px;
+}
+
+.flexrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    margin-top: 50px;
+}
+
+.project-container .color-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.project-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-contain {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+.img-contain a {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 30px;
+    background-color: black;
+    color: rgb(230, 230, 230);
+    padding: 15px 20px;
+    text-decoration: none;
+    visibility: hidden;
+}
+
+.img-contain a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.flexrow-component {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 350px;
+    align-items: center
+}
+
+.justify-bottom {
+    justify-content: flex-end;
+}
+
+.project-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
+#initials {
+    font-size: 150px;
+    line-height: 100px;
+    color: #F6F6F6;
+    font-weight: bold;
+}
+
+#light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(75, 75, 75);
+    opacity: 0.75;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+
+.quickview-container {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    z-index: 99999999999999999999;
+}
+
+#quickview {
+    width: 30vw;
+    height: 70vh;
+    position: fixed;
+    top: 15vh;
+    background-color: white;
+    z-index: 999999999999;
+    visibility: hidden;
+}
+
+#qv-label {
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#qv-content {
+    padding: 20px 50px;
+}
+
+#quickview h3 {
+    font-size: 30px;
+}
+
+#quickview p {
+    font-size: 20px;
+}
+
+#quickview .libraries {
+    font-style: italic;
+    font-size: 15px;
+}
+
+
+/* flip image  https://www.w3schools.com/howto/howto_css_flip_card.asp */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    float: left;
+    margin-right: 5vw;
+    margin-bottom: 30px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+@media (max-width: 500px) {
+
+    svg {
+        width: 200vw;
+        height: 600px;
+    }
+    #back-wrapper {
+        /* top: 150px; */
+    }
+    #fixed-backtext {
+        top: 100px;
+    }
+    #fixed-menu {
+        right: 50px;
+        font-size: 18px;
+    }
+    main {
+        padding: 30px 50px;
+    }
+
+    .flexrow {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .flexrow-component {
+        height: 250px;
+        width: 100%;
+        /* margin-bottom: 50px; */
+    }
+
+    #work main {
+        top: 50px;
+    }
+
+    .justify-bottom {
+        justify-content: center;
+    }
+
+    #initials {
+        font-size: 150px;
+    }
+
+}
