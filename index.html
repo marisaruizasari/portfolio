@@ -10,12 +10,12 @@
 <body>
     <div id="light-box"></div>
     <div id="quickview">
-        <div id="qv-label">quickview</div>
+        <div id="qv-label"></div>
         <div id="qv-content">
-            <h3>Project Title</h3>
-            <p>This is a brief description of the project in just one or two sentences. It will vary based on the project.</p>
-            <p class="libraries"><strong>libraries: </strong>d3.js</p>
-            <img src="images/sac.png" alt="" height="150px" style="margin-top: 20px">
+            <h3 id="qv-title"></h3>
+            <p id="qv-description"></p>
+            <p class="qv-libraries"><strong>libraries: </strong></p>
+            <img src="images/sac.png" alt="" height="100px" style="margin-top: 20px">
         </div>
     </div>
     <span id="fixed-menu">
@@ -3198,58 +3198,25 @@
                 </div>
             </div>
         </div>
-        <main>
-            <div class="flexrow">
-                <div class="flexrow-component justify-bottom">
-                    <div id="quakes" class="project-container">
-                         <div class="color-block b-green"></div>
-                         <div class="img-contain">
-                            <img src="images/earthquakes.png" alt="" class="project-img">
-                            <a href="">full view <i class="fas fa-chevron-right"></i></a>
-                         </div>
-                    </div>
+        <main id="projects-container">
+
+            <script id="project-template" type="x-handlebars-template">
+                <div class="flexrow">
+                    {{#each projects}}
+                        <div class="flexrow-component justify-bottom">
+                            <div id="{{id}}" class="project-container">
+                                <div class="color-block" style="background: {{color}}"></div>
+                                <div class="img-contain">
+                                    <img src="images/thumbnails/{{images.thumbnail}}" alt="" class="project-img">
+                                    <a href="{{link}}">full view <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
                 </div>
-                <div class="flexrow-component">
-                    <div id="guns" class="project-container">
-                         <div class="color-block b-purple"></div>
-                         <div class="img-contain">
-                            <img src="images/us-guns.png" alt="" class="project-img">
-                            <a href="">full view <i class="fas fa-chevron-right"></i></a>
-                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flexrow">
-                <div class="flexrow-component justify-bottom">
-                    <div class="project-container">
-                         <div id="aa" class="color-block b-red"></div>
-                         <div class="img-contain">
-                            <img src="images/aa-finder.png" alt="" class="project-img">
-                            <a href="">full view <i class="fas fa-chevron-right"></i></a>
-                         </div>
-                    </div>
-                </div>
-                <div class="flexrow-component">
-                    <div id="ap" class="project-container">
-                         <div class="color-block b-yellow"></div>
-                         <div class="img-contain">
-                            <img src="images/AP.png" alt="" class="project-img">
-                            <a href="">full view <i class="fas fa-chevron-right"></i></a>
-                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flexrow">
-                <div class="flexrow-component justify-bottom">
-                    <div id="sculptures" class="project-container">
-                         <div class="color-block b-brown"></div>
-                         <div class="img-contain">
-                            <img src="images/s_scale.png" alt="" class="project-img">
-                            <a href="">full view <i class="fas fa-chevron-right"></i></a>
-                         </div> 
-                    </div>
-                </div>
-            </div>
+
+            </script>
+
         </main>
     </div>
     <div id="initials">MRA</div>
@@ -3281,6 +3248,7 @@
         <p id="credits">Illustration by <a href="https://thedailypencil.com/">Liam Odonnell</a>, headshot by <a href="http://www.kutography.com/">Anya Ku</a></p>
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -1,0 +1,82 @@
+{
+    "projects": [
+        {   
+            "id": "eq",
+            "title": "Earthquake Hotspotting",
+            "images": {
+                "thumbnail": "eq.png",
+                "content-images": []
+            },
+            "color": "#4F6F51",
+            "description": "This visualization identifies urban earthquake hotspots using data from the US Geological Survey (USGS) on global seismic activity within the last 30 days.",
+            "libraries": [],
+            "project-link": "",
+            "github-link": ""
+        },
+        {
+            "id": "gv",
+            "title": "Urban Gun Violence",
+            "images": {
+                "thumbnail": "gv.png",
+                "content-images": []
+            },
+            "color": "#442560",
+            "description": "An exploration of urban gun violence reduction strategies in the United States. With alarming gun homicide and assault rates in the us, what can be done to support communities and individuals most impacted by gun violence?",
+            "libraries": [],
+            "project-link": "",
+            "github-link": ""
+        },
+        {
+            "id": "ap",
+            "title": "Advance Peace",
+            "images": {
+                "thumbnail": "ap.png",
+                "content-images": []
+            },
+            "color": "#FDB100",
+            "description": "A web application designed for both data collection and data visualization built for an evaluation of the Advance Peace urban gun violence reduction program and Peacemaker Fellowship.",
+            "libraries": [],
+            "project-link": "",
+            "github-link": ""
+        },
+        {
+            "id": "aa",
+            "title": "AA Meeting Finder",
+            "images": {
+                "thumbnail": "aa.png",
+                "content-images": []
+            },
+            "color": "#EF5C23",
+            "description": "This visualization is a tool that can be used to find Alchoholics Anonymous meetings in New York City.",
+            "libraries": [],
+            "project-link": "",
+            "github-link": ""
+        },
+        {
+            "id": "ss",
+            "title": "Scultpures of Scale",
+            "images": {
+                "thumbnail": "ss.png",
+                "content-images": []
+            },
+            "color": "#AE875B",
+            "description": "An exploration of the Met's online collection of sculptures through the lens of scale using the Met API",
+            "libraries": [],
+            "project-link": "",
+            "github-link": ""
+        },
+        {
+            "id": "dada",
+            "title": "Dada Eats",
+            "images": {
+                "thumbnail": "dada.png",
+                "content-images": []
+            },
+            "color": "#ad518a",
+            "description": "Illustration created for recipe developer and food blogging influencer Samah Dada of DadaEats",
+            "libraries": [],
+            "project-link": "",
+            "github-link": ""
+        }
+    ]
+}
