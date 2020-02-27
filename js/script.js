@@ -4,12 +4,9 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function loadData() {
-	$.getJSON("../content.json", (projects)=> {
+	$.getJSON("content.json", (projects)=> {
 
-
-		for (var i = 0; i < projects.length; i++) {
-			console.log(projects[i]);
-        }
+        console.log(projects);
 
         // call the handlebars function from below
 		handle(projects);
