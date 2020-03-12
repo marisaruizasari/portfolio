@@ -215,6 +215,8 @@ svg {
 }
 
 #qv-logo {
+    display: inline-block;
+    margin-top: 20px;
     bottom: 40px;
     padding: 20px;
     font-size: 70px;
@@ -237,7 +239,6 @@ svg {
 
 #qv-content {
     padding: 20px 50px;
-    position: relative;
 }
 
 #quickview h3 {
