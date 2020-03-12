@@ -97,11 +97,13 @@ svg {
     overflow-x: scroll;
     padding-top: 80px;
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
 #work {
     padding-bottom: 150px;
-    min-height: 2000px;
+    height: 3000px;
     position: relative;
 }
 
@@ -116,17 +118,17 @@ svg {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 12vw;
-    padding-right: 12vw;
-    margin-top: 50px;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    /* margin-top: 50px; */
 }
 
 .project-container .color-block {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 230px;
-    height: 200px;
+    width: 280px;
+    height: 250px;
 }
 
 .project-container img {
@@ -138,15 +140,15 @@ svg {
     position: absolute;
     top: 0;
     right: 0;
-    width: 230px;
-    height: 200px;
+    width: 280px;
+    height: 250px;
     background-color: white;
 }
 
 .img-contain a {
     position: absolute;
     top: 40%;
-    left: 20%;
+    left: 30%;
     border-radius: 30px;
     background-color: black;
     color: rgb(230, 230, 230);
@@ -175,8 +177,8 @@ svg {
 .project-container {
     /* flex-basis: 40%; */
     position: relative;
-    width: 250px;
-    height: 220px;
+    width: 300px;
+    height: 270px;
 }
 
 #initials {
@@ -197,22 +199,31 @@ svg {
     visibility: hidden;
 }
 
-.quickview-container {
+/* .quickview-container {
     width: 300px;
     height: 200px;
     background-color: white;
     position: absolute;
     z-index: 99999999999999999999;
-}
+} */
 
 #quickview {
-    width: 30vw;
-    height: 70vh;
     position: fixed;
-    top: 15vh;
     background-color: white;
     z-index: 999999999999;
     visibility: hidden;
+}
+
+#qv-logo {
+    position: absolute;
+    bottom: 40px;
+    padding: 20px;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    border-width: 1px;
+    border-style: dotted;
+
 }
 
 #qv-label {
@@ -227,6 +238,7 @@ svg {
 
 #qv-content {
     padding: 20px 50px;
+    position: relative;
 }
 
 #quickview h3 {
@@ -252,6 +264,7 @@ margin-top: 0;
 }
 
 #about a {
+    padding-top: 50px;
     text-decoration: none;
     font-weight: bold;
     color: black;
@@ -319,6 +332,95 @@ margin-top: 0;
     transform: rotateY(180deg);
   }
 
+  #about-img-container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* project pages */
+
+  #fixed-back {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+  }
+
+  #title {
+      margin-top: 75px;
+      padding-left: 5vw;
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+  }
+
+  #project-page-info {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 65vh;
+      background: rgba(0, 0, 0, 0.13);
+      padding: 0 5vw;
+      margin-top: 30px;
+      color: white;
+  }
+
+  #project-page-info a {
+      border-radius: 30px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.13);
+      text-decoration: none;
+      color: rgb(219, 219, 219);
+  }
+
+  #project-page-info a:hover {
+    color: white;
+    font-weight: bold;
+  }
+
+  #project-text {
+      padding-top: 50px;
+      padding-right: 5vw;
+      overflow-y: scroll;
+  }
+
+  #project-text #description {
+      margin-bottom: 70px;
+  }
+
+  #project-img {
+      height: 100%;
+      width: auto;
+  }
+
+  #back-to-portfolio {
+      border-color: rgba(255, 255, 255, 0.253);
+      color: rgba(255, 255, 255, 0.616);
+      text-decoration: none;
+      border-width: 1px;
+      border-style: solid;
+      padding: 15px;
+      position: absolute;
+      right: 5vw;
+      top: 20px;
+  }
+
+  #back-to-portfolio:hover {
+    color: white;
+  }
+
+
+@media (max-width: 1140px) {
+    .flexrow {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        align-content: center;
+    }
+    #qv-logo {
+        visibility: hidden;
+    }
+}
+
 
 @media (max-width: 500px) {
 
@@ -340,28 +442,34 @@ margin-top: 0;
         padding: 30px 50px;
     }
 
-    .flexrow {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
     .flexrow-component {
         height: 250px;
         width: 100%;
-        /* margin-bottom: 50px; */
     }
 
     #work main {
         top: 50px;
     }
 
-    .justify-bottom {
-        justify-content: center;
-    }
-
     #initials {
         font-size: 150px;
     }
 
+}
+
+@media (max-width: 950px) {
+    #project-page-info {
+        flex-direction: column-reverse;
+        /* align-items: center; */
+        justify-content: flex-end;
+    }
+    #project-img {
+        height: auto;
+        width: 30%;
+        margin-top: 30px;
+
+    }
+    #project-text {
+        overflow-y: visible;
+    }
 }

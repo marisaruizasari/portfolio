@@ -30,6 +30,15 @@ function handle(projects) {
 
 function addInteractivity(projects) {
 
+    // add random padding to projects
+    let rowComponents = $('.flexrow-component')
+
+    for (const comp of rowComponents) {
+        let randomPadding = Math.random() * 200;
+        $(comp).css({"margin-top": randomPadding})
+    }
+    
+
     $('.project-container').hover(function() {
         // console.log("hovering!")
 
@@ -48,7 +57,11 @@ function addInteractivity(projects) {
                 // set the quickview text with the correct project info
                 $('#qv-title').text(p.title);
                 $('#qv-description').text(p.description);
-                $('#qv-libraries').text(p.libraries);
+                $('.qv-libraries').html('<strong>libraries: <strong>');
+                for (const l of p.libraries) {
+                    $('.qv-libraries').append(l)
+                }
+                $('#qv-logo').text(p.id.toUpperCase());
             }
         }); 
 
@@ -57,7 +70,7 @@ function addInteractivity(projects) {
         console.log(colorBlock)
 
         //make full view button visible and add background color
-        $(this).find('a').css({'visibility':'visible', 'background-color': `${colorBlock}`});
+        $(this).find('a').css({'visibility':'visible', 'background-color': colorBlock});
         $(this).find('img').css({'opacity': '0.5'})
 
         //make img opacity lower
@@ -71,17 +84,31 @@ function addInteractivity(projects) {
         // make the quickview box visible
         $('#quickview').css({'visibility':'visible'})
         $('#qv-label').css({'background':`${colorBlock}`})
-        $('#qv-content').css({'color':`${colorBlock}`})
+        $('#qv-content').css({'color':`${colorBlock}`, 'display':'', 'flex-direction': ''})
+        $('#qv-content-text').css({'flex-basis':'', 'padding-right':''})
         
         // get the x and y position of the hovered element
         let el = this.getBoundingClientRect()
         console.log(el)
 
-        // if the x position is less than half of the viewport width, display the quickview on the right hand side, otherwise display it on the left
-        if (el.x < window.innerWidth/2) {
-            $('#quickview').css({'right':'20vw', 'left': ''})
+        // if window width is greater than 1140 px set the position of the quickview box right or left
+        if (window.innerWidth > 1140) {
+            // if the x position is less than half of the viewport width, display the quickview on the right hand side, otherwise display it on the left
+            if (el.x < window.innerWidth/2) {
+                $('#quickview').css({'right':'20vw', 'top': '15vh', 'width': '30vw', 'height': '70vh','left': ''})
+            } else {
+                $('#quickview').css({'left':'20vw', 'width': '30vw', 'height': '70vh', 'right': ''})
+            }
         } else {
-            $('#quickview').css({'left':'20vw', 'right': ''})
+
+            if (el.y < window.innerHeight/2) {
+                $('#quickview').css({'right':'', 'left':'0', 'bottom':'0px', 'width':'100%', 'height':'40vh', 'top': ''})
+                $('#qv-content').css({'display':'flex', 'flex-direction': 'row'})
+                $('#qv-content-text').css({'flex-basis':'60%', 'padding-right':'20px'})
+                $('#qv-logo').css({'flex-basis':'20%'})
+            } else {
+                $('#quickview').css({'visibility':'hidden'})
+            }
         }
 
     }, function() {
@@ -96,6 +123,4 @@ function addInteractivity(projects) {
     });
 
 }
-
-
 

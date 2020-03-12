@@ -9,9 +9,9 @@
             },
             "color": "#4F6F51",
             "description": "This visualization identifies urban earthquake hotspots using data from the US Geological Survey (USGS) on global seismic activity within the last 30 days.",
-            "libraries": [],
-            "project-link": "",
-            "github-link": ""
+            "libraries": ["d3.js, scrollama"],
+            "project-link": "work.html?eq",
+            "github-link": "https://marisaruizasari.github.io/earthquake-hotspotting/"
         },
         {
             "id": "gv",
@@ -21,9 +21,9 @@
                 "content-images": []
             },
             "color": "#442560",
-            "description": "An exploration of urban gun violence reduction strategies in the United States. With alarming gun homicide and assault rates in the us, what can be done to support communities and individuals most impacted by gun violence?",
-            "libraries": [],
-            "project-link": "",
+            "description": "An exploration of urban gun violence in the US. With alarming gun homicide and assault rates in the us, what can be done to support communities most impacted by gun violence?",
+            "libraries": ["vue.js, greensock, d3.js"],
+            "project-link": "work.html?gv",
             "github-link": ""
         },
         {
@@ -35,8 +35,8 @@
             },
             "color": "#FDB100",
             "description": "A web application designed for both data collection and data visualization built for an evaluation of the Advance Peace urban gun violence reduction program and Peacemaker Fellowship.",
-            "libraries": [],
-            "project-link": "",
+            "libraries": ["bootstrap.css, jquery"],
+            "project-link": "work.html?ap",
             "github-link": ""
         },
         {
@@ -48,9 +48,9 @@
             },
             "color": "#EF5C23",
             "description": "This visualization is a tool that can be used to find Alchoholics Anonymous meetings in New York City.",
-            "libraries": [],
-            "project-link": "",
-            "github-link": ""
+            "libraries": ["node.js, express, d3.js, moment.js"],
+            "project-link": "work.html?aa",
+            "github-link": "http://52.90.218.227:8080/aa-page.html"
         },
         {
             "id": "ss",
@@ -61,9 +61,9 @@
             },
             "color": "#AE875B",
             "description": "An exploration of the Met's online collection of sculptures through the lens of scale using the Met API",
-            "libraries": [],
-            "project-link": "",
-            "github-link": ""
+            "libraries": ["d3.js, bootsrap.css, jquery"],
+            "project-link": "work.html?ss",
+            "github-link": "https://marisaruizasari.github.io/sculptures-of-scale-final/index.html"
         },
         {
             "id": "dada",
@@ -74,8 +74,8 @@
             },
             "color": "#ad518a",
             "description": "Illustration created for recipe developer and food blogging influencer Samah Dada of DadaEats",
-            "libraries": [],
-            "project-link": "",
+            "libraries": ["Adobe Illustrator"],
+            "project-link": "work.html?dada",
             "github-link": ""
         }
     ]

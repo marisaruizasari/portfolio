@@ -10,12 +10,16 @@
 <body>
     <div id="light-box"></div>
     <div id="quickview">
-        <div id="qv-label"></div>
+        <div id="qv-label">Quick View</div>
         <div id="qv-content">
-            <h3 id="qv-title"></h3>
-            <p id="qv-description"></p>
-            <p class="qv-libraries"><strong>libraries: </strong></p>
-            <img src="images/sac.png" alt="" height="100px" style="margin-top: 20px">
+            <div id="qv-content-text">
+                <h3 id="qv-title"></h3>
+                <p id="qv-description"></p>
+                <p class="qv-libraries"><strong>libraries: </strong></p>
+                
+            </div>
+            <div id="qv-logo"></div>
+            <!-- <img src="images/sac.png" alt="" height="100px" style="margin-top: 20px"> -->
         </div>
     </div>
     <span id="fixed-menu">
@@ -3208,7 +3212,7 @@
                                 <div class="color-block" style="background: {{color}}"></div>
                                 <div class="img-contain">
                                     <img src="images/thumbnails/{{images.thumbnail}}" alt="" class="project-img">
-                                    <a href="{{link}}">full view <i class="fas fa-chevron-right"></i></a>
+                                    <a href="{{project-link}}">full view <i class="fas fa-chevron-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -3221,31 +3225,32 @@
     </div>
     <div id="initials">MRA</div>
     <main id="about" class="b-grey">
-
         
-
-        <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="images/marisa-illustration.png" alt="illustration by Liam Odonnell" style="width:300px;height:300px;">
-              </div>
-              <div class="flip-card-back">
-                <img src="images/headshot2.png" alt="illustration by Liam Odonnell" style="width:300px;height:300px;">
-              </div>
+        <div id="about-img-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="images/marisa-illustration.png" alt="illustration by Liam Odonnell" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <img src="images/headshot2.png" alt="illustration by Liam Odonnell" style="width:300px;height:300px;">
+                </div>
+                </div>
             </div>
+            <p id="credits">Illustration by <a href="https://thedailypencil.com/">Liam Odonnell</a>, headshot by <a href="http://www.kutography.com/">Anya Ku</a></p>
         </div>
 
-        <h3>Marisa Ruiz Asari.</h3> 
-
         <div id="about-content">
-            This is the about section. 
-            It will contain information about me! A small blurb describing my work and how I got into data viz. 
-            Then a brief overview of education and past work.
+            <h3>Marisa Ruiz Asari.</h3> 
+
+            <p> I love communicating information and ideas through design! Using a combination of graphic design, illustration, and other visual media along with data analysis & research, I support projects and people that are part of the global equity and social justice movements. </p>
+
+            <p>As a Project Manager at the UC Berkeley Institute of Urban and Regional Development, I manage a range of global and local research projects that engage community partners working to advance equity and improve public health. I work closely with faculty and graduate students in the Department of City and Regional Planning and School of Public Health, helping to facilitate seminars and support studio courses. I also do part time graphic design and data visualization consulting for non-profits and local health centers. </p>
+                
+            <p>I'm currently based in NYC pursuing an MS in Data Visualization, and in my free time you'll catch me cooking, reading, or exploring the city!  </p>
+
+            <a href="">View my resume</a>
         </div> 
-        <br><br><br><br>
-        <a href="">Link to my resume</a>
-        <br><br><br><br><br<br><br><br><br>
-        <p id="credits">Illustration by <a href="https://thedailypencil.com/">Liam Odonnell</a>, headshot by <a href="http://www.kutography.com/">Anya Ku</a></p>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
