@@ -27,7 +27,7 @@ function handle(project) {
     $('#title').html(project.title);
     $('#description').html(project.description);
     $('#project-link').prop('href', project['github-link']);
-    $('#project-img').prop('src', `../images/thumbnails/${project.images.thumbnail}`);
+    $('#project-img').prop('src', `images/thumbnails/${project.images.thumbnail}`);
 
     // let source = $("#project-page-template").html();
     // let projectTemplate = Handlebars.compile(source);
