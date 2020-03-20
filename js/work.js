@@ -29,10 +29,4 @@ function handle(project) {
     $('#project-link').prop('href', project['github-link']);
     $('#project-img').prop('src', `images/thumbnails/${project.images.thumbnail}`);
 
-    // let source = $("#project-page-template").html();
-    // let projectTemplate = Handlebars.compile(source);
-    // let result = projectTemplate(project);
-    // let container = $('#project-page-info');
-    // container.append(result);
-
 }
