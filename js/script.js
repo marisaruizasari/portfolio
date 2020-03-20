@@ -34,7 +34,7 @@ function addInteractivity(projects) {
     let rowComponents = $('.flexrow-component')
 
     for (const comp of rowComponents) {
-        let randomPadding = Math.random() * 200;
+        let randomPadding = Math.random() * 150;
         $(comp).css({"margin-top": randomPadding})
     }
     
